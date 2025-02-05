@@ -1,6 +1,4 @@
 spring:
-  application:
-    version: 0.0.1-SNAPSHOT
 
   datasource:
     url: jdbc:postgresql://localhost:5432/openteams
@@ -16,8 +14,15 @@ management:
   endpoints:
     web:
       base-path: /actuator
+      discovery:
+        enabled: false
       exposure:
-        include: info,health
+        include: info,health,metrics
+      cors:
+        allowed-methods: GET
 
 server:
   port: 8080
+  error:
+    whitelabel:
+      enabled: true
