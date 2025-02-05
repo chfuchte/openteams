@@ -1,4 +1,4 @@
-package de.chfuchte.openteams.configuration;
+package de.chfuchte.openteams.config;
 
 import io.swagger.v3.oas.models.*;
 import io.swagger.v3.oas.models.info.*;
@@ -17,7 +17,7 @@ public class SwaggerConfiguration {
                         .description("")
                         .version(applicationVersion)
                         .license(new License().name("MIT").url("https://opensource.org/license/mit"))
-                        .contact(new Contact().name("Christian Fuchte").url("https://github.com/chfuchte/openteams"))
+                        .contact(new Contact().name("Christian Fuchte").url("https://github.com/chfuchte"))
                 );
     }
 }

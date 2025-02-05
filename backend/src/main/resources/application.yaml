@@ -1,0 +1,23 @@
+spring:
+  application:
+    version: 0.0.1-SNAPSHOT
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/openteams
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: info,health
+
+server:
+  port: 8080
