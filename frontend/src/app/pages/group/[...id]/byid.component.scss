@@ -1,0 +1,61 @@
+@use "../../../../styles/base.scss";
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    h1 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .chat {
+        width: min(90dvw, 90ch);
+        border: 2px solid base.$forground;
+        border-radius: base.$radius;
+        padding: 1.2rem;
+
+        .message-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            max-height: 600px;
+            overflow-y: scroll;
+
+            .message {
+                width: fit-content;
+                max-width: 90%;
+                border-radius: base.$radius;
+                padding-inline: 0.4rem;
+                padding-top: 0.2rem;
+                padding-bottom: 0.2rem;
+                border-radius: base.$radius;
+                background: base.$primary;
+
+                span {
+                    font-size: 0.8rem;
+                    padding-left: 0.2rem;
+                }
+
+                p {
+                    padding-left: 0.3rem;
+                    padding-right: 0.3rem;
+                    font-size: 1rem;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        input {
+            margin-top: 1.5rem;
+            width: 100%;
+        }
+    }
+}

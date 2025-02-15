@@ -1,0 +1,11 @@
+<div id="auth_form">
+    <h2>Anmelden</h2>
+    <p>Bitte melden Sie sich an, um fortzufahren.</p>
+    <form [formGroup]="authForm" (ngSubmit)="handleSubmit()">
+        <div id="error_alert" *ngIf="error">{{ error }}</div>
+        <input type="email" id="email" formControlName="email" placeholder="vorname.nachname@domain.de" required />
+        <input type="password" id="password" formControlName="password" placeholder="PupsbaerchenSonderzeichen!"
+            required />
+        <button type="submit" [disabled]="!authForm.valid">Anmelden</button>
+    </form>
+</div>

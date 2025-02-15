@@ -1,0 +1,8 @@
+<app-header />
+
+<main>
+    <div class="dashboard_card_container">
+        <app-dashboard-card class="dashboard_card" [url]="buildUrl(group.id)" [title]="group.name"
+            [description]="buildDescription(group.memberCount)" *ngFor="let group of groups" />
+    </div>
+</main>

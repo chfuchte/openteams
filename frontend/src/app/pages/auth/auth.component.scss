@@ -1,0 +1,25 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 6rem 0 0 0;
+    height: 100%;
+    row-gap: 0rem;
+    column-gap: 4rem;
+
+    #auth_header {
+        padding-left: 1rem;
+        padding-inline: 1rem;
+        box-sizing: border-box;
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
+}

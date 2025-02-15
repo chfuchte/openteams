@@ -1,0 +1,30 @@
+@use "../../styles/base.scss";
+
+a {
+    div {
+        width: min(90dvw, 320px);
+
+        background-color: base.$primary;
+        border-radius: base.$radius;
+        padding: 1.2rem;
+
+        h2 {
+            font-size: 1em;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 0.9em;
+        }
+    }
+
+    &:hover,
+    &:focus-visible {
+        text-decoration: none;
+
+        div {
+            background-color: base.$hover_primary;
+            transform: background-color 0.2s ease;
+        }
+    }
+}

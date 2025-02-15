@@ -1,0 +1,45 @@
+@use "../../styles/base.scss";
+
+div#auth_form {
+    width: min(90dvw, 450px);
+    background-color: base.$primary;
+    border-radius: base.$radius;
+    padding: 1.2rem;
+
+    h2 {
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 0.95em;
+    }
+
+    form {
+        margin-top: 1rem;
+
+        *:not(:first-child) {
+            margin-top: 0.75rem;
+        }
+
+        *:not(:last-child) {
+            margin-bottom: 0.75rem;
+        }
+
+        input {
+            width: 100%;
+        }
+
+        button {
+            width: 100%;
+        }
+
+        #error_alert {
+            width: 100%;
+            background-color: base.$error;
+            color: base.$forground;
+            padding: 0.5rem 0.75rem;
+            border-radius: calc(base.$radius/2);
+        }
+    }
+}

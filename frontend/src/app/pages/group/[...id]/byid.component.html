@@ -1,0 +1,16 @@
+<app-header />
+
+<main>
+    <h1>Gruppe {{ group?.name }}</h1>
+    <p>Gruppenmitglieder: {{ group?.members?.join(', ') }}</p>
+
+    <section class="chat">
+        <div class="message-container">
+            <div class="message" *ngFor="let message of group?.chat?.messages">
+                <span>{{ message.user }}</span>
+                <p>{{ message.message }}</p>
+            </div>
+        </div>
+        <input type="text" placeholder="Nachricht eingeben" (keydown)="handleOnKeyDown($event)" />
+    </section>
+</main>

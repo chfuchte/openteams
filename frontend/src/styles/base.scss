@@ -1,0 +1,77 @@
+$background: #0f0f0f;
+$forground: #f0f0f0;
+
+$surface: #1e1e1e;
+$on_surface: $forground;
+
+$accent: #1979e6;
+$on_accent: $forground;
+
+$primary: #0c3a6e;
+$on_primary: $forground;
+$hover_primary: #0051ad;
+
+$radius: 1rem;
+$disabled: #ffffff20;
+$hr: #333;
+$error: #ff2828cc;
+
+html {
+    background: $background;
+    color: $forground;
+    accent-color: $accent;
+    font-family: -apple-system, "Open Sans", system-ui, sans-serif;
+}
+
+input {
+    background-color: transparent;
+    color: inherit;
+    border-bottom: 2px solid $forground;
+    outline: none;
+    padding: 0.25rem 0.5rem 0.125rem 0.5rem;
+
+    &:focus-visible {
+        border-color: $accent;
+    }
+
+    &:user-invalid {
+        border-color: $error;
+    }
+}
+
+button {
+    border: 2px solid $forground;
+    border-radius: calc($radius / 2);
+    outline: none;
+    padding: 0.5rem 0.75rem;
+
+    &:hover,
+    &:focus {
+        background: $forground;
+        color: $background;
+        transition:
+            color ease 0.5s,
+            background-color ease 0.5s;
+    }
+
+    &:active {
+        transition: border-color ease 0.1s;
+        border-color: $background;
+    }
+
+    &:disabled {
+        background: $disabled;
+        color: $forground;
+        border-color: $disabled;
+        cursor: not-allowed;
+    }
+}
+
+a {
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+        text-decoration: underline;
+    }
+}
